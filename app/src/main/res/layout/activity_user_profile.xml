@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/gray"
+    android:fillViewport="true"
+    tools:context=".Profile.UserProfileActivity"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/login_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_large"
+            android:gravity="center_horizontal"
+            android:text="Profile"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/nunito_semibold"
+            android:textSize="20sp" />
+
+
+
+        <View
+            android:id="@+id/View"
+            android:layout_width="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="2dp"
+            android:layout_below="@id/login_title"
+            android:background="@color/colorPrimary"
+            android:layout_marginBottom="@dimen/margin_normal"/>
+
+
+
+
+
+
+
+
+
+        <com.github.florent37.shapeofview.shapes.ArcView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:id="@+id/shape1"
+            app:shape_arc_cropDirection="outside"
+            app:shape_arc_height="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginTop="70dp"
+            android:layout_below="@+id/login_title"
+            app:shape_arc_position="top">
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/login_title"
+                android:background="#fff"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="30dp">
+
+
+
+
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:hint="@string/name"
+                        android:textSize="14sp"
+                        android:padding="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:background="@drawable/edittext_shape_design_color"
+                        android:drawablePadding="@dimen/margin_small"
+                        android:paddingRight="@dimen/margin_small"
+                        android:id="@+id/update_UserName"
+                        android:inputType="textEmailAddress" />
+
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:hint="@string/email"
+                        android:textSize="14sp"
+                        android:padding="@dimen/margin_small"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/edittext_shape_design_color"
+                        android:drawablePadding="@dimen/margin_small"
+                        android:drawableTint="@color/colorPrimaryDark"
+                        android:paddingRight="@dimen/margin_small"
+                        android:id="@+id/update_UserEmail"
+                        android:inputType="textEmailAddress" />
+
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/phone"
+                        android:textSize="14sp"
+                        android:padding="@dimen/margin_small"
+                        android:background="@drawable/edittext_shape_design_color"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:drawablePadding="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:drawableTint="@color/colorPrimaryDark"
+                        android:paddingRight="@dimen/margin_small"
+                        android:id="@+id/update_UserPhone"
+                        android:inputType="number" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginStart="@dimen/margin_normal"
+                        android:id="@+id/homeValueLayout"
+                        app:passwordToggleEnabled="true"
+                        android:visibility="gone"
+                        android:background="@drawable/edittext_shape_design_color"
+                        android:layout_marginEnd="@dimen/margin_normal">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/password"
+                            android:textSize="14sp"
+                            android:padding="@dimen/margin_small"
+                            android:background="@null"
+                            android:backgroundTint="@color/colorPrimaryDark"
+                            android:drawablePadding="@dimen/margin_small"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:paddingRight="@dimen/margin_small"
+                            android:id="@+id/userPassword"
+                            android:inputType="textPassword" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                    <Button
+                        android:id="@+id/update_Btn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="22dp"
+                        android:background="@drawable/background_design_box"
+                        android:text="Update"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </com.github.florent37.shapeofview.shapes.ArcView>
+
+        <LinearLayout
+            android:id="@+id/user_profile_photo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:layout_below="@+id/View"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:background="@drawable/profile_oval"
+            android:elevation="4dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:src="@drawable/men"
+                android:id="@+id/profileClick"
+                ></de.hdodenhof.circleimageview.CircleImageView>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

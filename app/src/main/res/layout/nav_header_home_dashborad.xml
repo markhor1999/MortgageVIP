@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="270dp"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+ <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/app_name"
+         android:textColor="@color/colorPrimary"
+         android:gravity="center"
+         android:textSize="22sp"
+         android:fontFamily="@font/nunito_semibold"
+         android:id="@+id/name"
+         />
+
+     <View
+         android:id="@+id/view"
+         android:layout_width="200dp"
+         android:layout_height="1dp"
+         android:layout_below="@+id/name"
+         android:layout_centerHorizontal="true"
+         android:background="@color/lightgray"
+         android:layout_marginLeft="32dp"
+         android:layout_marginRight="32dp"
+         android:layout_marginBottom="@dimen/margin_normal"
+         android:layout_marginTop="@dimen/margin_small"
+
+         />
+
+
+     <de.hdodenhof.circleimageview.CircleImageView
+         android:layout_below="@+id/view"
+         android:id="@+id/imageProfile"
+         android:layout_width="80dp"
+         android:layout_centerHorizontal="true"
+         android:layout_height="80dp"
+         android:layout_marginLeft="2dp"
+         android:src="@drawable/men"
+         ></de.hdodenhof.circleimageview.CircleImageView>
+
+
+     <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_below="@id/imageProfile"
+    >
+     <TextView
+         android:id="@+id/text1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+
+         android:gravity="bottom"
+         android:text="@string/app_name"
+         android:textColor="@color/lightgray"
+         android:fontFamily="@font/nunito_semibold"
+         android:textStyle="bold"
+
+
+         />
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="number"
+        android:layout_below="@id/text1"
+        android:layout_gravity="center"
+
+        android:textColor="@color/lightgray"
+        android:gravity="bottom"
+        android:layout_marginBottom="4dp"
+        android:textSize="10sp"
+        android:fontFamily="@font/nunito_semibold"
+        />
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:gravity="end"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="bottom"
+            android:src="@drawable/logout"
+            android:tint="@color/colorPrimary"
+            />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center"
+            android:layout_below="@id/text1"
+            android:textColor="@color/lightgray"
+            android:gravity="bottom"
+            />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/profileBtn"
+        android:layout_width="250dp"
+        android:layout_height="35dp"
+        android:background="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:text="Profile"
+        android:textColor="@color/colorPrimaryDark"
+        android:textAllCaps="false"
+        android:fontFamily="@font/nunito_semibold"
+        android:layout_marginTop="8dp"></Button>
+
+
+
+
+
+
+
+
+</LinearLayout>
+
+</RelativeLayout>
+</LinearLayout>

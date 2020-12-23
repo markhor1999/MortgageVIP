@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AboutUS.TermConditionActivity"
+    tools:showIn="@layout/activity_tips_activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_large"
+                app:cardCornerRadius="@dimen/margin_small"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/black"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:orientation="vertical">
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:text="@string/about_textHeadind3"
+                        android:textColor="@color/colorPrimary"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginBottom="@dimen/margin_normal"
+                        android:gravity="start"
+                        android:text="@string/about_textHeadind4"
+                        android:textColor="@color/colorPrimary"
+                        android:fontFamily="@font/nunito_semibold"                        android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginBottom="@dimen/margin_normal"
+                        android:gravity="start"
+                        android:text="@string/about_textHeadind4"
+                        android:textColor="@color/colorPrimary"
+                        android:fontFamily="@font/nunito_semibold"                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginBottom="48dp"
+                        android:gravity="start"
+                        android:text="@string/about_textHeadind4"
+                        android:textColor="@color/colorPrimary"
+                        android:fontFamily="@font/nunito_semibold"                        android:textSize="14sp" />
+
+
+
+                </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!--<android.support.design.widget.FloatingActionButton-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/termBack_button"-->
+            <!--android:layout_below="@id/linear"-->
+            <!--android:layout_marginTop="-32dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--app:borderWidth="0dp"-->
+            <!--android:src="@drawable/back"-->
+            <!--android:backgroundTint="@color/darkYellow"-->
+            <!--/>-->
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

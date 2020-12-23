@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".calculator.CalculatorActivity"
+
+>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimaryDark"
+        app:title="@string/app_name"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextColor="@color/colorPrimary" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@id/toolbar">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_centerHorizontal="true"
+            android:text="Mortgage Calculator"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito_semibold"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/img"
+            />
+
+            <View
+                android:layout_width="120dp"
+                android:layout_height="2dp"
+                android:layout_below="@id/img"
+                android:background="@color/colorPrimaryDark"
+                android:id="@+id/view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"/>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view"
+                android:id="@+id/cardView"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_large"
+                app:cardCornerRadius="@dimen/margin_small">
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:layout_marginStart="@dimen/margin_normal"
+                        android:id="@+id/homeValueLayout"
+                        android:layout_marginEnd="@dimen/margin_normal">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/homeValue"
+                            android:drawableRight="@drawable/dollar_icon"
+                            android:drawablePadding="@dimen/margin_small"
+                            android:paddingRight="@dimen/margin_small"
+                            android:id="@+id/homeValue"
+                            android:inputType="numberDecimal"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginStart="@dimen/margin_normal"
+                        android:layout_below="@id/homeValueLayout"
+                        android:orientation="horizontal"
+                        android:id="@+id/linear"
+                        android:weightSum="2">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/downPayment"
+                                android:inputType="numberDecimal"
+                                android:id="@+id/downPayment"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/radioGroup"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            >
+
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:layout_marginLeft="@dimen/margin_small"
+                                android:text="$"
+                                android:id="@+id/dollar"
+                                />
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_normal"
+                                android:text="%"
+                                android:id="@+id/percentage"
+                                />
+
+
+
+
+
+                        </RadioGroup>
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginStart="@dimen/margin_normal"
+                        android:layout_below="@id/linear"
+                        android:orientation="horizontal"
+                        android:id="@+id/linear2"
+                        android:weightSum="2">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                          android:layout_weight="1">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/loanAmount"
+                                android:drawableRight="@drawable/dollar_icon"
+                                android:drawablePadding="@dimen/margin_small"
+                                android:paddingRight="@dimen/margin_small"
+                                android:editable="false"
+                                android:inputType="none"
+                                android:clickable="false"
+                                android:id="@+id/loanAmount"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="@dimen/margin_normal"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/interstrate"
+                                android:drawableRight="@drawable/percentage_icon"
+                                android:drawablePadding="@dimen/margin_small"
+                                android:paddingRight="@dimen/margin_small"
+                                android:inputType="numberDecimal"
+                                android:id="@+id/interestRate"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@id/linear2"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:id="@+id/l"
+                        android:layout_marginStart="@dimen/margin_normal"
+                        android:weightSum="2">
+
+
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/termLayout"
+                            android:layout_weight="1"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/loanTermss"
+                                android:inputType="number"
+                                android:id="@+id/loanTerm"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/l"
+                            android:layout_weight="1"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginEnd="@dimen/margin_normal"
+                            android:hint="Start Date"
+                            android:id="@+id/startDate"
+                            android:inputType="none"
+                            android:focusableInTouchMode="false"
+                            android:clickable="true"
+                            android:editable="false"
+                            android:drawableLeft="@drawable/clock_icon"
+                            android:drawablePadding="@dimen/margin_small"
+                            android:paddingLeft="@dimen/margin_small"
+                            />
+
+                    </LinearLayout>
+
+
+
+
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@id/termLayout"-->
+                        <!--android:layout_marginTop="@dimen/margin_small"-->
+                        <!--android:layout_marginStart="@dimen/margin_normal"-->
+                        <!--android:textSize="13sp"-->
+                        <!--android:text="Start Date"-->
+                        <!--android:id="@+id/dateText"-->
+                        <!--android:textColor="@color/colorPrimary"/>-->
+
+
+                    <!---->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="160dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_toRightOf="@id/dateText"-->
+                        <!--android:layout_below="@id/termLayout"-->
+                        <!--android:layout_marginTop="@dimen/margin_small"-->
+                        <!--android:layout_marginStart="@dimen/margin_small"-->
+                        <!--android:background="@drawable/rounded_spinner"-->
+                        <!--&gt;-->
+
+                        <!--<Spinner-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:entries="@array/months"-->
+                            <!--/>-->
+
+
+                    <!--</LinearLayout>-->
+
+
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_normal"
+                        android:layout_below="@id/l"
+                        android:orientation="horizontal"
+                        android:id="@+id/linear3"
+                        android:weightSum="2">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/tax"
+                                android:drawableRight="@drawable/dollar_icon"
+                                android:drawablePadding="@dimen/margin_small"
+                                android:paddingRight="@dimen/margin_small"
+                                android:inputType="numberDecimal"
+                                android:id="@+id/propertyTax"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="@dimen/margin_normal"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/pmi"
+                                android:drawableRight="@drawable/percentage_icon"
+                                android:drawablePadding="@dimen/margin_small"
+                                android:paddingRight="@dimen/margin_small"
+                                android:inputType="numberDecimal"
+                                android:id="@+id/pmi"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginStart="@dimen/margin_normal"
+                        android:layout_below="@id/linear3"
+                        android:orientation="horizontal"
+                        android:id="@+id/linear4"
+                        android:weightSum="2">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/income"
+                                android:drawableRight="@drawable/dollar_icon"
+                                android:drawablePadding="@dimen/margin_small"
+                                android:paddingRight="@dimen/margin_small"
+                                android:inputType="numberDecimal"
+                                android:id="@+id/homeInsurance"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="@dimen/margin_normal"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/monthly"
+                                android:drawableRight="@drawable/percentage_icon"
+                                android:drawablePadding="@dimen/margin_small"
+                                android:paddingRight="@dimen/margin_small"
+                                android:inputType="numberDecimal"
+                                android:id="@+id/monthlyHoa"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginStart="@dimen/margin_normal"
+                        android:layout_marginEnd="@dimen/margin_normal"
+                        android:layout_below="@id/linear4"
+                        android:weightSum="2"
+                        android:id="@+id/linear5"
+                        android:orientation="horizontal"
+                        >
+
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="1"
+                           android:background="@drawable/rounded_spinner">
+
+
+                           <Spinner
+                               android:layout_width="match_parent"
+                               android:layout_height="40dp"
+                               android:id="@+id/rafiOrBuy"
+                               android:entries="@array/rafi">
+
+
+
+                           </Spinner>
+
+
+
+                       </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="@dimen/margin_small"
+                            android:background="@drawable/rounded_spinner">
+
+                            <Spinner
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:id="@+id/loanType"
+                                android:entries="@array/loantype">
+
+
+
+                            </Spinner>
+
+
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/linear5"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginStart="@dimen/margin_normal"
+                        android:layout_marginEnd="@dimen/margin_normal"
+                        android:background="@drawable/rounded_spinner"
+                        android:layout_marginBottom="@dimen/margin_normal">
+
+
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:id="@+id/creditRating"
+                            android:entries="@array/rating">
+
+
+
+
+                        </Spinner>
+
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/cardView"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:text="@string/calculate"
+                android:textAllCaps="false"
+                android:id="@+id/calculateBtn"
+                android:fontFamily="@font/nunito_semibold"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/colorPrimary"/>
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>

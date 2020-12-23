@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "395050148461",
+    "project_id": "mortgage-vip-app",
+    "storage_bucket": "mortgage-vip-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395050148461:android:f0ba873ca6da2de2425564",
+        "android_client_info": {
+          "package_name": "com.preesoft.mortgagevip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "395050148461-q828j7mjsa4nsbnhhi9e196tsth626qn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkXVzov9uvgZbAsgrfhKiA-7KJa9jp3nw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "395050148461-q828j7mjsa4nsbnhhi9e196tsth626qn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

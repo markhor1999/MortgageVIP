@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".Auth.ForgotActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/colorPrimaryDark"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fg_logo"
+                    android:layout_width="250dp"
+                    android:layout_height="120dp"
+                    android:text="@string/app_name"
+                    android:textSize="32sp"
+                    android:gravity="center"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_large" />
+
+
+                <TextView
+                    android:id="@+id/fg_txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:text="Welcome Mortgage VIP "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_small"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fg_txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:text="@string/forgot_password"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:textColor="@color/colorPrimary"
+                    />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/linear_cardForgot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginTop="220dp"
+                android:layout_marginRight="@dimen/margin_normal"
+                app:cardCornerRadius="10dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:gravity="center"
+                        android:text="@string/password_reset_text"
+                        android:textColor="@color/colorPrimaryDark" />
+
+
+                    <EditText
+                        android:id="@+id/forgetEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:layout_marginBottom="@dimen/margin_large"
+                        android:background="@drawable/edittext_shape_design_color"
+                        android:drawablePadding="@dimen/margin_small"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="@dimen/margin_small" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/submitButton"
+                android:layout_below="@id/linear_cardForgot"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-32dp"
+                app:borderWidth="0dp"
+                android:src="@drawable/ic_arrow_forward_black_24dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="bottom"
+                android:layout_marginBottom="@dimen/margin_normal">
+
+                <TextView
+                    android:id="@+id/loginText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="LOGIN"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/registerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_toRightOf="@id/loginText"
+                    android:text="| REGISTER"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimaryDark" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
